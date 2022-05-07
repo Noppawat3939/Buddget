@@ -8,6 +8,13 @@ export const Container = styled.div`
   overflow: hidden;
   box-shadow: -1px 2px 8px 2px rgba(0, 0, 0, 0.08);
   transition: 0.4s ease-in-out;
+  
+  > div > h3 {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.fontColor.body};
+  }
 
   &:hover {
     transform: translateY(-8px);
