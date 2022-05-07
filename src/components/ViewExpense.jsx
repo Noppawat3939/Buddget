@@ -32,6 +32,10 @@ function ViewExpense({ budgetId, handleClose }) {
             <CloseBtn onClick={handleClose} />
           </Header>
           <div>
+              <h3>
+              {getBudgetExpenses(budgetId).length < 1 &&
+                `You don't have any ${budget?.name} expenses. bother specifying additional expenses.`}
+              </h3>
             <ul>
               {getBudgetExpenses(budgetId).map((expense) => (
                 <ExpenseList key={expense.id}>
